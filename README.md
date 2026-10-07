@@ -36,6 +36,14 @@ GitHub Pages: Settings > Pages > Source "Deploy from a branch", branch `main`, f
 If the site moves to its own domain, update the absolute URLs in the `<head>` of the three `index.html`
 files (canonical, `og:url`, `og:image`, JSON-LD), plus `robots.txt` and `sitemap.xml`.
 
+## Security
+
+Static files only: no server code, database, forms, login or third-party scripts. Every page ships a
+Content Security Policy (meta tag) that only allows scripts, styles, fonts and images from this site.
+External links open with `rel="noreferrer"`. GitHub Pages cannot set response headers, so
+`frame-ancestors`/`X-Frame-Options` (clickjacking) and custom HSTS are not possible here; turn on
+"Enforce HTTPS" in the Pages settings.
+
 ## Status
 
 - Done: home, B2B and café pages, responsive layout, parallax, SEO metadata.
