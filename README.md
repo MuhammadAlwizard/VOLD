@@ -33,6 +33,12 @@ Or open `index.html` directly in a browser. All links are relative, so the site 
 GitHub Pages: Settings > Pages > Source "Deploy from a branch", branch `main`, folder `/ (root)`.
 `.nojekyll` is included so Pages serves the files as they are.
 
+A second copy runs on the owner's VPS behind Caddy (`file_server`, no app process, no port). The clone root
+also holds `.git`, `scripts` and this README, so the Caddy block serves an explicit path allowlist and
+returns 404 for everything else. A new top-level page must be added to that allowlist. That copy also sends
+the security headers GitHub Pages cannot (`frame-ancestors`, `X-Frame-Options`, HSTS) and `noindex`
+until it gets its own domain. Redeploy there is `git pull`, no build.
+
 If the site moves to its own domain, update the absolute URLs in the `<head>` of the three `index.html`
 files (canonical, `og:url`, `og:image`, JSON-LD), plus `robots.txt` and `sitemap.xml`.
 
