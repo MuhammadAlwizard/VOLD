@@ -1,0 +1,4 @@
+# Public business contact (VOLD Artisan WhatsApp and store address), shown on purpose on the live site.
+^index\.html$
+^b2b/index\.html$
+^cafe/index\.html$

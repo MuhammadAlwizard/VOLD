@@ -1,0 +1,17 @@
+# local only
+design/
+node_modules/
+.env
+.env.*
+!.env.example
+out
+dist
+coverage
+.claude
+*.log
+*.zip
+*.sql
+*.pem
+*.key
+.DS_Store
+Thumbs.db

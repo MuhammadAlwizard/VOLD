@@ -1,0 +1,9 @@
+{
+  "name": "voldartisan",
+  "private": true,
+  "description": "Static website for VOLD Artisan, an artisan bakery & café in Batam Center.",
+  "scripts": {
+    "check:public": "node scripts/check-public.mjs",
+    "start": "npx --yes serve@14.2.4 ."
+  }
+}
