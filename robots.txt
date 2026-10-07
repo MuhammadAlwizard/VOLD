@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://muhammadalwizard.github.io/voldartisan/sitemap.xml
+Sitemap: https://muhammadalwizard.github.io/VOLD/sitemap.xml
